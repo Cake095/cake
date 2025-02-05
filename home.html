@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>kanokwan</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">     
+        <div class="logo"><a href="#">Web travel Creative</a>
+        </div>
+        <ul class="links">
+           <li><a href="hero">home</a></li>
+           <li><a href="about">about</a></li>
+           <li><a href="gallery">gallery</a></li>
+           <li><a href="Contact">Contact</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown_menu">
+        <li><a href="hero">home</a></li>
+        <li><a href="about">about</a></li>
+        <li><a href="gallery">gallery</a></li>
+        <li><a href="Contact">Contact</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
+    </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>kanokwan</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+                <br /> numquam architecto quidem officiis fuga vitae vel eum non nam qui!
+            </p>
+            <div class="media-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-line"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+            </div>
+            <div class="media-icons1">
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+
+            </div>
+        </section>
+    </main>
+    <script>
+        const toggleBtn = document.querySelector ('.toggle_btn')
+        const toggleBtnIcon = document.querySelector ('.toggle_btn i')
+        const dropDownMenu = document.querySelector ('.dropdown_menu')
+        toggleBtn.onclick = function() {
+
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            
+            toggleBtnIcon.classList.contains =isOpen
+            ? (toggleBtnIcon.classList.replace("fa-bars","fa-rectangle-xmark"))
+             :  (toggleBtnIcon.classList.replace("fa-rectangle-xmark","fa-bars"))
+             /*"fa-regular fa-rectangle-xmark","fa-solid fa-bars"
+             "fa-solid fa-bars" */
+        }
+
+    </script>
+</body>
+</html>
